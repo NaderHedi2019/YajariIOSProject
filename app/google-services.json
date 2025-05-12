@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "349765511326",
+    "project_id": "yajari-5343c",
+    "storage_bucket": "yajari-5343c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349765511326:android:55e41b5c77f41e9ef0b38f",
+        "android_client_info": {
+          "package_name": "com.app.yajari"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdi7cwyRTVj9_wEO71EQx8nDla8zEHpPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

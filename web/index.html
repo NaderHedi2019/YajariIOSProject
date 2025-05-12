@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yajari</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Yajari</h1>
+            <div id="auth-section">
+                <div id="login-form" class="auth-form">
+                    <h2>Login</h2>
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password">
+                    <button onclick="login()">Login</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="content">
+                <div id="partners-section" class="hidden">
+                    <h2>Our Partners</h2>
+                    <div id="partners-list"></div>
+                </div>
+
+                <div id="announcements-section" class="hidden">
+                    <h2>Announcements</h2>
+                    <div id="announcements-list"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

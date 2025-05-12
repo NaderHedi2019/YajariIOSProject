@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    TimeAgo-->
+    <string name="time_ago_prefix" />
+    <string name="time_ago_suffix" />
+    <string name="time_ago_seconds">Tout de suite</string>
+    <string name="time_ago_minute">1min</string>
+    <string name="time_ago_minutes">%dmin</string>
+    <string name="time_ago_hour">1h</string>
+    <string name="time_ago_hours">%dh</string>
+    <string name="time_ago_day">1j</string>
+    <string name="time_ago_days">%dj</string>
+    <string name="time_ago_month">1mo</string>
+    <string name="time_ago_months">%dmos</string>
+    <string name="time_ago_year">1a</string>
+    <string name="time_ago_years">%da</string>
+
+    <!--Splash Screen-->
+    <string name="help_desc_1">+%1$s Dons Accomplis!</string>
+    <string name="help_desc_2">+%1$s Donateurs prêts à apporter leur aide!</string>
+    <string name="app_desc">Donner, recevoir, un lien qui fait la différence!</string>
+    <string name="app_exit">Vous voulez quitter l\'application?</string>
+
+    <!--Login Screen-->
+    <string name="log_in">Se connecter</string>
+    <string name="login_desc">Merci d\'entrer vos identifiants pour accéder à l\'application!</string>
+    <string name="email_address">Email</string>
+    <string name="email_address_s">Email*</string>
+    <string name="password">Mot de passe</string>
+    <string name="password_s">Mot de passe*</string>
+    <string name="forgot_password">Mot de passe oublié?</string>
+    <string name="don_t_have_an_account">Vous n\'êtes pas encore inscrit?</string>
+    <string name="create_account">Créer votre compte</string>
+
+    <!--Signup Screen-->
+    <string name="create_account_desc">Créer un nouveau compte pour continuer!</string>
+    <string name="name">Nom et prénom</string>
+    <string name="name_s">Nom et prénom*</string>
+    <string name="date_of_birth">Date de naissance*</string>
+    <string name="enter_date_of_birth">Date de naissance</string>
+    <string name="mobile_number">Numéro de téléphone</string>
+    <string name="mobile_number_s">Numéro de téléphone*</string>
+    <string name="location">Localisation</string>
+    <string name="enter_location">Localisation</string>
+    <string name="enter_email_address">Email</string>
+    <string name="enter_password">Taper votre mot de passe</string>
+    <string name="confirm_password">Confirmer votre mot de passe</string>
+    <string name="confirm_password_s">Confirmer votre mot de passe*</string>
+    <string name="enter_confirm_password">Confirmer votre de passe</string>
+    <string name="terms_privacy_text">"En continuant, vous acceptez nos Conditions d'utilisation et notre Politique de confidentialité.</string>
+    <string name="already_have_an_account">Déjà inscrit?</string>
+    <string name="login">Se connecter</string>
+
+    <!--OTP Screen-->
+    <string name="otp_verification">Vérification OTP</string>
+    <string name="we_sent_you_6_digit_code">Nous vous transmettons un code à 6 chiffres.</string>
+    <string name="at">On</string>
+    <string name="verify">Vérifier maintenant</string>
+    <string name="resend_code">Re-envoyer le code</string>
+
+    <!--Forgot Password Screen-->
+    <string name="forgot_desc">Entrez l\'adresse e-mail liée à\n votre compte.</string>
+    <string name="send_now">Envoyer maintenant</string>
+    <string name="verify_account">Vérifier compte</string>
+    <string name="verify_desc">Nous venons de vous envoyer un lien de réinitialisation du mot de passe \nLink on %1$s</string>
+
+    <!--Home Screen-->
+    <string name="home">Home</string>
+    <string name="food">Nourriture</string>
+    <string name="add">Ajouter</string>
+    <string name="chat">Messagerie</string>
+    <string name="profile">Profil</string>
+    <string name="many_object_are_ready_to_take">Beaucoup d\'objets et de nourriture sont prêts à être emportés !</string>
+    <string name="donation">Dons</string>
+    <string name="request">Demandes</string>
+
+    <!--Announcement Details Screen-->
+    <string name="details">Détail</string>
+    <string name="donate_by">Donné par</string>
+    <string name="donations">Dons</string>
+    <string name="collection">collections</string>
+    <string name="send_request">Envoyer une demande</string>
+    <string name="send_request_to_take_this_food">Envoyer une demande pour collecter %1$s</string>
+    <string name="write_your_message">Ecrire votre message!</string>
+    <string name="msg_success_request">Message envoyé !</string>
+    <string name="continue_e">Continuer</string>
+    <string name="cancel_reservation_msg">Vous voulez annuler la réservation?</string>
+    <string name="contact">Contacter</string>
+
+    <!--Filter Dialog-->
+    <string name="filters">Filtres</string>
+    <string name="disability">Disponibilité</string>
+    <string name="reset">Re-initialiser</string>
+    <string name="distance">Distance</string>
+    <string name="object_s_condition">Etat d\'objet</string>
+    <string name="select_object_s_condition">Selectionner un etat</string>
+    <string name="apply">Appliquer</string>
+
+    <!--Notifications Screen-->
+    <string name="notifications">Notifications</string>
+    <string name="object">Objet</string>
+    <!--Status-->
+    <string name="all">Tous</string>
+    <string name="available">Disponible</string>
+    <string name="reserved">Réservé</string>
+    <string name="rejected">Rejeté</string>
+    <string name="finalized">Finalisé</string>
+    <string name="pending">En cours</string>
+    <string name="reject_by_admin">Rejeté par l\'administrateur</string>
+
+
+    <!--Rating Review Screen-->
+    <string name="customer_reviews"><![CDATA[Note et avis]]></string>
+    <string name="_5">5</string>
+    <string name="_4">4</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_1">1</string>
+    <string name="rate_review"><![CDATA[Note et avis]]></string>
+
+    <!--Submit rating screen-->
+    <string name="communication">Communication</string>
+    <string name="punctuality">Ponctualité</string>
+    <string name="write_your_review">Taper votre avis</string>
+    <string name="submit_review">Envoyer</string>
+
+    <!--Rate App Dialog-->
+    <string name="app_rate_msg">Êtes-vous satisfait(e) de l\'expérience avec l\'application ?</string>
+    <string name="rate_exp_msg">"Quelle note donneriez-vous à votre expérience \n avec Ya Jari</string>
+    <string name="submit">Envoyer</string>
+
+    <!--Chat screen-->
+    <string name="adoption">Collections</string>
+    <string name="my_donation">Mes Dons</string>
+    <string name="my_request">Mes Demandes</string>
+
+    <!--Publish Announcement Screen-->
+    <string name="category">Catégories*</string>
+    <string name="category_s">Catégorie</string>
+    <string name="be_healthy">Adoptez un mode de vie sain!</string>
+    <string name="healthy_desc">Optez toujours pour proposer des aliments et des fruits frais aux autres!</string>
+    <string name="select_category">Choisir catégorie</string>
+    <string name="title">Titre*</string>
+    <string name="description">Déscription*</string>
+    <string name="item_name">Nommer l\'object</string>
+    <string name="write_about_item">Décrire l\'objet</string>
+    <string name="condition">Condition*</string>
+    <string name="select_condition">Choisir l\'état</string>
+    <string name="location_r">Localisation*</string>
+    <string name="upload_photo_r">Importer photos*</string>
+    <string name="upload_photo">Importer photo</string>
+    <string name="expiration_date">Date d\'éxpiration*</string>
+    <string name="select_date">Indiquer la date</string>
+    <string name="photo_desc">N\'hésitez pas à partager une image de l\'objet, cela aidera les autres à le réclamer plus tôt</string>
+    <string name="i_am_a_commercial">Je suis Commercial?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="post_announcement">Envoyer l\'annonce</string>
+    <string name="publish_announcement">Publier l\'announce</string>
+
+
+    <!--Submit Announcement Screen-->
+    <string name="announcement_submission">Publication de l\'annonce</string>
+    <string name="announcement_s_desc">Votre annonce est en cours de validation \nElle sera publié dans le plus vite possible</string>
+
+    <!--Announcement Request Or Donation Details screen-->
+    <string name="view_announcement">Voir l\'annonce</string>
+
+    <!--Chat details screen-->
+    <string name="closed">Finalisé</string>
+    <string name="write_review">Donner avis</string>
+    <string name="cancel_reservation">Annuler la réservation</string>
+    <string name="say_something">dites quelque chose…</string>
+    <string name="reserve_msg">Voulez vous resèrver cet objet?</string>
+    <string name="reserve_food_msg">Voulez-vous réserver cette nourriture?</string>
+    <string name="reserve_object_msg">Voulez-vous réserver cet objet?</string>
+    <!--My Profile screen-->
+    <string name="my_profile">Mon Profil</string>
+    <string name="edit">Modifier</string>
+    <string name="delete">supprimer</string>
+
+    <!--Edit Announcement screen-->
+    <string name="type_of_announcement">Type de l\'annonce</string>
+    <string name="what_you_want_to_give">Que voulez vous donner?</string>
+    <string name="update_announcement">Mettre à jour l\'annonce</string>
+    <string name="edit_announcement">Modifier l\'annonce</string>
+
+    <!--Side Menu-->
+    <string name="alert_setting">Créer Alerte</string>
+    <string name="my_announcement">Mes annonces</string>
+    <string name="my_fav">Mes Favoris</string>
+    <string name="my_package">Mon Package</string>
+    <string name="community_impact"><![CDATA[Communauté  & impact]]></string>
+    <string name="yajari">Ya Jary</string>
+    <string name="out_partner">Nos partenaires</string>
+    <string name="account_parameter">Paramêtres compte</string>
+    <string name="logout">Se déconnecter</string>
+    <string name="logout_msg">Voulez vous se déconnecter?</string>
+
+    <!-- My Favourite Screen -->
+    <string name="announcement">Annonces</string>
+    <string name="users">Utilisateurs</string>
+
+    <!--My Package screen-->
+    <string name="pricing_for_everyone">arification accessible à tous</string>
+    <string name="subscription">Abonnement</string>
+    <string name="hi">Hi</string>
+    <string name="you_are_now_a_premium_member">Vous êtes maintenant un membre Premium</string>
+    <string name="status">Statut</string>
+    <string name="valid_till">Valable jusqu\'au</string>
+
+    <!--Community & Impact Screen-->
+    <string name="total_users">Total Utilisateurs</string>
+    <string name="total_donation">Total Dons</string>
+
+    <!--Account Parameter Screen-->
+    <string name="personnel_information">Informations Personnelles</string>
+    <string name="change_password">Modifier votre Mot de passe</string>
+    <string name="delete_account">Supprimer votre compte</string>
+    <string name="delete_account_s">Supprimer votre compte</string>
+    <string name="delete_account_msg">Voulez vous supprimer votre compte?</string>
+    <string name="delete_desc">Une fois supprimé, il ne pourra pas être récupéré !</string>
+    <string name="delete_account_desc">Merci de taper votre mot de passe!</string>
+
+    <!--Change Password Screen-->
+    <string name="current_password">Mot de passe Actuel</string>
+    <string name="enter_current_password">Taper votre mot de passe actuel</string>
+    <string name="new_password">Nouveau mot de passe</string>
+    <string name="enter_new_password">Taper votre nouveau mot de passe</string>
+    <string name="change_pwd_msg">Votre mot de passe a été changé avec succès!</string>
+
+    <!--Help & Suppport-->
+    <string name="write_message">Taper votre message</string>
+
+    <!--Common MSG Dialog-->
+    <string name="we_will_contact_you_very_soon">Nous vous contacterons bientôt !</string>
+
+    <!--Yajari Screen-->
+    <string name="about_us">Qui nous sommes?</string>
+    <string name="help_amp_support"><![CDATA[Aide et assistance]]></string>
+    <string name="terms_amp_conditions"><![CDATA[Conditions Générales d’Utilisation]]></string>
+    <string name="privacy_policy">Politique de Confidentialité</string>
+    <string name="faqs">FAQs</string>
+
+    <!--Edit Profile Screen-->
+    <string name="edit_profile">Modifier profil</string>
+    <string name="upload_amp_update_photo"><![CDATA[Actualiser la Photo]]></string>
+    <string name="save_amp_update"><![CDATA[Enregistrer]]></string>
+    <string name="profile_update_msg">Votre profil a été mis à jour avec succès!</string>
+    <string name="reservation_reconfirm_msg">Voulez vous confirmer la réservation?</string>
+    <string name="really_cancel_reservation_msg">Voulez vous annuler la réservation?</string>
+    <string name="rate_re_confirm_msg">Voulez vous envoyer votre avis?</string>
+    <string name="sub_confirm_msg">Are you sure you want to purchase subscription plan.</string>
+    <string name="report">Signaler</string>
+    <string name="review_success_msg">Votre avis a été envoyé avec succès!</string>
+    <string name="closed_announcement_msg">Voulez vous finaliser cette annonce?</string>
+    <string name="closed_success_msg">Votre annonce a été finalisée avec succès!</string>
+    <string name="reservation_success_msg">Votre annonce a été réservée avec succés!</string>
+    <string name="announcement_cancel_success">La réservation a été annulée avec succès!</string>
+    <string name="plan_purchase_msg">You have purchase plan successfully</string>
+    <string name="choose_the_language">Choisir Langue</string>
+    <string name="select_language_which_you_prefer">Selectionner la langue</string>
+    <string name="change_language">Modifier la langue</string>
+    <string name="title_activity_account_parameter">L\'activité de Paramêtre de compte</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Premier Segment</string>
+    <string name="second_fragment_label">Deuxième Segment</string>
+    <string name="next">Suivant</string>
+    <string name="previous">Precédant</string>
+
+    <string name="continue_as_guest">Continuer en tant qu\'invité</string>
+    <string name="ops">Oops!</string>
+    <string name="no_internet_msg">Pas de connexion internet,\nVérifier votre connexion!</string>
+    <string name="try_again">Essayer de nouveau</string>
+    <string name="new_version_available">Nouvelle version\ndisponible</string>
+    <string name="version_update_msg">Nous avons fait quelques mise à jour pour améliorer la performance de l\'application. Merci d\'installer la dernière version.</string>
+    <string name="skip">Ignorer</string>
+    <string name="update">Installer</string>
+    <string name="notification_permission_required">Notification de permission requise</string>
+    <string name="settings">Paramêtres</string>
+
+    <!-- Report Announcement Option -->
+    <string name="its_spam">Spam</string>
+    <string name="nudity_sexual">Nudité ou Contenu sexuel</string>
+    <string name="do_not_like">J\'aime pas</string>
+    <string name="scam_fraud">Arnaque ou Fraude</string>
+    <string name="false_info">Fausse information</string>
+    <string name="hate_speech">Discours de haine ou symboles haineux</string>
+    <string name="report_announcement">Signaler l\'Annonce</string>
+    <string name="report_announcement_desc">Voulez vous signaler cette annonce? Si oui, Merci d\'indiquer la raison!</string>
+    <string name="report_user_desc">Voulez vous signaler cet utilisateur? Si oui, Merci d\'indiquer la raison!</string>
+    <string name="confirm">Confirmer</string>
+    <string name="report_msg">Merci pour votre signalement</string>
+    <string name="spam_report_msg">On a récu votre signalement</string>
+
+    <string name="location_access_restricted">Localisation Non Autorisée</string>
+    <string name="location_message">Pour localiser les annonces les plus proches, merci d\'activier l\'accès à la localisation dans les paramêtres de l\'application.</string>
+    <string name="notification_push_message">Pour recevoir les notifications, merci d\'activier les notifications dans les paramêtres de l\'application.</string>
+    <string name="go_to_setting">Accèder aux réglages</string>
+    <string name="enable_location">Activier la localisation</string>
+    <string name="select_dob_title">Selectionner la date</string>
+    <string name="please_enter_name">Nom</string>
+    <string name="please_enter_dob">Date de naissance</string>
+    <string name="please_enter_mobile_number">Numéro de téléphone mobile</string>
+    <string name="please_enter_location">Localisation</string>
+    <string name="please_enter_email">Email</string>
+    <string name="please_enter_valid_email">Merci de taper un email valide</string>
+    <string name="please_enter_password">Mot de passe</string>
+    <string name="please_enter_confirm_password">Confirmer mot de passe</string>
+    <string name="password_miss_match">Les deux mots de passe ne sont pas identiques!</string>
+    <string name="terms_accept_msg"><![CDATA[Accepter les Conditions d’utilisation et la politique de confidentialité]]></string>
+    <string name="please_enter_current_password">Mot de passe actuel</string>
+    <string name="please_enter_new_password">Nouveau mot de passe</string>
+    <string name="change_pwd_miss_match">Les deux mots de passe ne sont identiques!</string>
+    <string name="please_enter_message">Ecrice votre message</string>
+    <string name="please_login_continue">Merci de se connecter pour continuer</string>
+    <string name="what_type_announcement">quel type d\'annonce?</string>
+    <string name="i_give">Je donne</string>
+    <string name="i_ask_for">J\'ai besoin de</string>
+    <string name="what_kind_thing">Que voulez vous donner?</string>
+    <string name="search">Recherche catégorie</string>
+    <string name="please_select_category">Choisir catégorie</string>
+    <string name="you_can_select_only_5_image">Vous pouvez choisir max 3 photos!</string>
+    <string name="please_enter_title">Titre</string>
+    <string name="please_enter_desc">Description</string>
+    <string name="please_select_condition">Choisir état</string>
+    <string name="please_select_exp_date">Date d\'expiration</string>
+    <string name="please_select_pic">Merci de choisir au moins 1 photo!</string>
+    <string name="password_length_error">le mot de passe de doit comporter 4 caracteres</string>
+    <string name="confirm_password_length_error">le mot de passe de confirmation doit comporter 4 caracteres</string>
+    <string name="new_password_length_error">Le nouveau mot de passe doit comporter 4 caractères</string>
+    <string name="no_data_found">Non trouvé!</string>
+    <string name="member_since">Membre depuis : </string>
+    <string name="current_new_password_not_same">Nouveau et mot de passe actuel ne doivent pas être identiques!</string>
+    <string name="no_food_object_found">Aucun résultat trouvé! utiliser les filtres pour voir les annonces</string>
+    <string name="no_donation_found">Pas de dons trouvé!</string>
+    <string name="no_donation_chat_found">Pas de conversation trouvée!</string>
+    <string name="no_request_found">Pas de demande trouvée!</string>
+    <string name="no_request_chat_found">Pas de conversation trouvée!</string>
+    <string name="no_fav_announcement_found">Pas d\'annonce dans les favoris!</string>
+    <string name="view_this_announcement">Voir l\'annonce:\n</string>
+    <string name="delete_announcement_msg">Voulez vous supprimer l\'annonce?</string>
+    <string name="no_fav_user_found">Pas d\'utilisateur dans les favoris!</string>
+    <string name="no_announcement_found">Pas d\'annonce trouvée!</string>
+    <string name="available_announcement">Annonces disponibles</string>
+    <string name="reserved_announcement">annonces réservées</string>
+    <string name="please_enter_your_message">Merci d\'écrire votre message</string>
+    <string name="_0_km">0 Km</string>
+    <string name="km">%1$s Km</string>
+    <string name="please_enter_valid_name">Taper un nom valide</string>
+    <string name="please_enter_valid_title">Taper un titre valide</string>
+    <string name="dob_15_msg">Votre age ne devra pas être moins de 15 ans!</string>
+    <string name="giver">Donneurs</string>
+    <string name="message_error">Merci d\'écrire votre message</string>
+    <string name="sending">Envois…</string>
+    <string name="finalized_you">Finalisé pour vous !</string>
+    <string name="more_request_msg">Voulez vous continuer à recevoir d\'autres demandes?</string>
+    <string name="no_notification_found">Notification non trouvé!</string>
+    <string name="review_description_msg">Merci d\'écrire votre avis</string>
+    <string name="please_select_reason">Merci de selectionner la raison</string>
+    <string name="report_user">Signaler utilisateur</string>
+    <string name="communication_amp_punctuality"><![CDATA[Communication& Ponctualité]]></string>
+    <string name="v_rating_amp_reviews"><![CDATA[%1$s Note & Commentaire]]></string>
+    <string name="no_rate_review_found"><![CDATA[Aucun Avis Trouvé]]></string>
+    <string name="top_3_givers">Top 3 Donneurs</string>
+    <string name="no_faq_found">Aucun FAQ trouvé !</string>
+    <string name="request_by">Demandé par</string>
+    <string name="garden_amp_diy"><![CDATA[Garden & DIY]]></string>
+    <string name="_10km">10km</string>
+    <string name="_100km">100Km</string>
+    <string name="taker">Preneur</string>
+    <string name="send_alert">Envoyer Alerte</string>
+    <string name="password_invalid">Le mot de passe doit comporter au moins 4 caractères, comprenant au moins 1 lettre minuscule, 1 lettre majuscule, 1 chiffre et 1 caractère spécial (!@#$%^&amp;*).</string>
+    <string name="confirm_password_invalid">La confirmation du mot de passe doit comporter au moins 4 caractères, comprenant au moins 1 lettre minuscule, 1 lettre majuscule, 1 chiffre et 1 caractère spécial (!@#$%^&amp;*).</string>
+    <string name="new_password_invalid">Le nouveau mot de passe doit comporter au moins 4 caractères, comprenant au moins 1 lettre minuscule, 1 lettre majuscule, 1 chiffre et 1 caractère spécial (!@#$%^&amp;*).</string>
+    <string name="messages">Messages</string>
+    <string name="hi_welcome">Bonjour, Bienvenue</string>
+    <string name="request_n">Demande</string>
+    <string name="privacy_policy_l">Politique de confidentialité</string>
+    <string name="terms_of_services_">Conditions d\'utilisation</string>
+
+</resources>

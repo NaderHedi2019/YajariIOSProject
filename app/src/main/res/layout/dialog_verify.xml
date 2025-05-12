@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardCornerRadius="25dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/padding_25"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logoIV"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_verify_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/verifyAccountTV"
+            android:layout_marginTop="@dimen/margin_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoIV"
+            style="@style/tvStyle700"
+            android:text="@string/verify_account"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/verifyDescTV"
+            style="@style/tvStyle400"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/verify_desc"
+            app:layout_constraintTop_toBottomOf="@id/verifyAccountTV"
+            />
+        <com.google.android.material.button.MaterialButton
+            style="@style/btnStyle"
+            android:id="@+id/verifyBTN"
+            android:text="@string/verify"
+            android:layout_marginTop="@dimen/margin_40"
+            app:layout_constraintTop_toBottomOf="@id/verifyDescTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closeIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:src="@drawable/ic_close_dialog"
+        app:layout_constraintBottom_toTopOf="@+id/dialogCL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialogCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_round_bg"
+        android:paddingHorizontal="@dimen/margin_20"
+        android:paddingVertical="@dimen/margin_25"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/msgTV"
+            style="@style/tvStyle600"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/delete_account_msg"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descTV"
+            style="@style/tvStyle500"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:text="@string/delete_desc"
+            android:textColor="@color/color_4E5053"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/msgTV" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/noBTN"
+            style="@style/btnStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginEnd="@dimen/margin_15"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/padding_16"
+            android:text="@string/no"
+            android:textColor="@color/color_414141"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/yesBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descTV"
+            app:strokeColor="@color/color_414141"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/yesBTN"
+            style="@style/btnStyle"
+            android:layout_width="0dp"
+            android:padding="@dimen/padding_16"
+            android:text="@string/yes"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/noBTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/noBTN"
+            app:layout_constraintTop_toTopOf="@id/noBTN" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

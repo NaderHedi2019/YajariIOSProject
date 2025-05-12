@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.ProfileFragment">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileIV"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_35"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_dummy_5"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/donateNameTV"
+        style="@style/tvStyle600"
+        android:textSize="@dimen/text_18"
+        android:layout_marginHorizontal="@dimen/padding_16"
+        android:text="Henley Bieber"
+        app:layout_constraintEnd_toStartOf="@+id/ratingIV"
+        android:textColor="@color/color_151515"
+        app:layout_constraintStart_toEndOf="@id/profileIV"
+        app:layout_constraintTop_toTopOf="@id/profileIV" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ratingIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_star"
+        android:layout_marginEnd="@dimen/padding_8"
+        app:layout_constraintBottom_toBottomOf="@id/totalReviewTV"
+        app:layout_constraintTop_toTopOf="@id/totalReviewTV"
+        app:layout_constraintEnd_toStartOf="@id/ratingTV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ratingTV"
+        style="@style/tvStyle400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:text="4.2"
+        android:textColor="@color/color_828282"
+        app:layout_constraintBottom_toBottomOf="@id/totalReviewTV"
+        app:layout_constraintTop_toTopOf="@id/totalReviewTV"
+        app:layout_constraintEnd_toStartOf="@id/totalReviewTV"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totalReviewTV"
+        style="@style/tvStyle600"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_6"
+        android:text="(120)"
+        android:textColor="@color/color_414141"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/donateNameTV"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/joiningDateTV"
+        style="@style/tvStyle400"
+        android:text="Member since: 12/08/2023"
+        android:textColor="@color/black_80"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_5"
+        app:layout_constraintStart_toStartOf="@id/donateNameTV"
+        app:layout_constraintTop_toBottomOf="@id/donateNameTV"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/donationCountTV"
+        style="@style/tvStyle500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@id/donationTV"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/donateNameTV"
+        app:layout_constraintTop_toBottomOf="@id/joiningDateTV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/donationTV"
+        style="@style/tvStyle500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        android:text="@string/donations"
+        app:layout_constraintBottom_toBottomOf="@id/donationCountTV"
+        android:textColor="@color/color_828282"
+        app:layout_constraintEnd_toStartOf="@id/collectionCountTV"
+        app:layout_constraintStart_toEndOf="@id/donationCountTV"
+        app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/collectionCountTV"
+        style="@style/tvStyle500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/collectionTV"
+        app:layout_constraintStart_toEndOf="@id/donationTV"
+        app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/collectionTV"
+        style="@style/tvStyle500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        android:text="@string/collection"
+        app:layout_constraintBottom_toBottomOf="@id/donationCountTV"
+        android:textColor="@color/color_828282"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/collectionCountTV"
+        app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tabCV"
+        style="@style/cardStyle"
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        android:layout_marginTop="@dimen/margin_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/margin_18"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/profileIV"
+        >
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/ProfileTL"
+            app:tabRippleColor="@null"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/tab_unselected_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/Text_Semi_Bold_16"
+            app:tabTextColor="@color/tab_color_selector" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/profileVP"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabCV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

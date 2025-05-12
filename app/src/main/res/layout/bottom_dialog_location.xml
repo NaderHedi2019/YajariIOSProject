@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closeIV"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/bottom_sheet_round_bg"
+    android:paddingBottom="@dimen/padding_25"
+    android:elevation="10dp"
+    android:layout_marginTop="@dimen/margin_20"
+    app:layout_constraintTop_toBottomOf="@id/closeIV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/topIV"
+        android:src="@drawable/ic_bottom_line"
+        android:layout_marginTop="@dimen/margin_20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTV"
+        style="@style/tvStyle700"
+        android:layout_marginTop="@dimen/margin_15"
+        app:layout_constraintTop_toBottomOf="@id/topIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/location_access_restricted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descTV"
+        android:textColor="@color/color_414141"
+        android:textSize="@dimen/text_14"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_20"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/location_message"
+        android:layout_marginTop="@dimen/margin_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        style="@style/tvStyle400"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        style="@style/btnStyle"
+        android:id="@+id/goBTN"
+        android:layout_marginHorizontal="@dimen/margin_20"
+        android:text="@string/go_to_setting"
+        android:layout_marginTop="@dimen/margin_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descTV"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

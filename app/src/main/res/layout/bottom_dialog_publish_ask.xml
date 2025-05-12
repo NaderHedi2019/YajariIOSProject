@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closeIV"
+        app:layout_constraintBottom_toTopOf="@+id/dialogCL"
+        android:src="@drawable/ic_close_dialog"
+        android:layout_marginBottom="@dimen/margin_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialogCL"
+        android:background="@drawable/bottom_sheet_round_bg"
+        android:paddingHorizontal="@dimen/margin_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="@dimen/padding_30"
+        android:paddingBottom="@dimen/padding_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/sliderVP"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhpan.indicator.IndicatorView
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sliderVP"
+            app:layout_constraintEnd_toEndOf="@id/sliderVP"
+            app:layout_constraintStart_toStartOf="@id/sliderVP"
+            app:vpi_slider_checked_color="@color/colorPrimary"
+            app:vpi_slider_normal_color="@color/color_D9D9D9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

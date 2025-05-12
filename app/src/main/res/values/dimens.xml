@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="chart_height">300dp</dimen>
+    <!--    Text Size-->
+    <dimen name="text_28">28sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_25">25sp</dimen>
+    <dimen name="text_31">31sp</dimen>
+    <dimen name="text_36">36sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_21">21sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_17">17sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_15">15sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_13">13sp</dimen>
+    <dimen name="text_11">11sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_10">10sp</dimen>
+    <dimen name="text_9">9sp</dimen>
+    <dimen name="text_26">26sp</dimen>
+    <dimen name="text_34">26sp</dimen>
+    <dimen name="text_23">23sp</dimen>
+    <dimen name="text_48">48sp</dimen>
+    <dimen name="text_8">8sp</dimen>
+    <dimen name="text_35">35sp</dimen>
+    <dimen name="text_39">39sp</dimen>
+    <dimen name="text_19">19sp</dimen>
+
+    <!--    Margin-->
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_22">22dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+
+    <!--    Padding-->
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_7">7dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
+    <dimen name="margin_23">23dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+
+    <dimen name="speech_bubble_corners">10dp</dimen>
+    <dimen name="speech_bubble_corners_plus_tail">15dp</dimen>
+    <dimen name="speech_bubble_spacing">5dp</dimen>
+    <dimen name="speech_bubble_tail">25dp</dimen>
+
+    <dimen name="top_bar_height">110dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="text_22">22sp</dimen>
+    <dimen name="text_30">30sp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="padding_22">22dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="padding_45">45dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="padding_50">50dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_35">35dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_17">17dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="margin_17">17dp</dimen>
+    <dimen name="padding_7">7dp</dimen>
+    <dimen name="width">52dp</dimen>
+
+</resources>

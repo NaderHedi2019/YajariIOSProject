@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.announcement_details.AnnouncementDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/sliderVP"
+            android:layout_width="0dp"
+            android:layout_height="420dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhpan.indicator.IndicatorView
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_40"
+            app:layout_constraintBottom_toBottomOf="@id/sliderVP"
+            app:layout_constraintEnd_toEndOf="@id/sliderVP"
+            app:layout_constraintStart_toStartOf="@id/sliderVP"
+            app:vpi_slider_checked_color="@color/colorPrimary"
+            app:vpi_slider_normal_color="@color/black_50" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tagTV"
+            style="@style/tvStyle600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@drawable/shape_tag"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/padding_10"
+            android:text="Good condition"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@id/shareIV"
+            app:layout_constraintEnd_toStartOf="@id/shareIV"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toTopOf="@id/shareIV" />
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/shareIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:src="@drawable/ic_share_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/shape_announcement_detail"
+            android:paddingHorizontal="@dimen/padding_20"
+            android:paddingBottom="@dimen/margin_20"
+            app:layout_constraintTop_toBottomOf="@id/sliderVP">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTV"
+                style="@style/tvStyle700"
+                android:layout_marginTop="@dimen/margin_25"
+                android:gravity="start"
+                android:text="Dark brown t shirt with rounded neck"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/typeTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintWidth_default="wrap"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                tools:text="Fashion"
+                app:layout_constraintEnd_toStartOf="@id/distanceTV"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/distanceTV"
+                style="@style/tvStyle600"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                tools:text="3.0 Km"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/color_414141"
+                app:layout_constraintBottom_toBottomOf="@id/typeTV"
+                app:layout_constraintStart_toEndOf="@id/typeTV"
+                app:layout_constraintTop_toTopOf="@id/typeTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:drawableStart="@drawable/ic_location_km"
+                android:drawablePadding="@dimen/padding_10"
+                android:text="2118 Horridge Cir. Syracuse, Connecticut 35624"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/typeTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/agoTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_18"
+                android:drawableStart="@drawable/ic_calender"
+                android:drawablePadding="@dimen/padding_10"
+                android:text="3 day ago"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/announcementTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_18"
+                android:drawableStart="@drawable/ic_reserved_announcement"
+                android:drawablePadding="@dimen/padding_10"
+                android:text="Reserved"
+                android:textColor="@color/color_reserved"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agoTV" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/color_DCDCDC"
+                app:layout_constraintTop_toBottomOf="@id/announcementTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailTV"
+                style="@style/tvStyle600"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/details"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailDescTV"
+                style="@style/tvStyle500"
+                android:layout_marginTop="@dimen/margin_15"
+                android:lineSpacingExtra="5dp"
+                android:text="Lorem ipsum dolor sit amet consectetur. Feugiat suspendisse risus feugiat et ridiculus ac sapien scelerisque. Vitae libero eget scelerisque enim. Sed sapien quisque volutpat viverra turpis mattis. Vel"
+                android:textColor="@color/color_828282"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailTV" />
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/color_DCDCDC"
+                app:layout_constraintTop_toBottomOf="@id/detailDescTV" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationMapTV"
+                style="@style/tvStyle600"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/location"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/mapIV"
+                android:src="@drawable/map_dummy"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/padding_16"
+                app:layout_constraintTop_toBottomOf="@id/locationMapTV"
+                app:shapeAppearanceOverlay="@style/ImageView.Round10"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

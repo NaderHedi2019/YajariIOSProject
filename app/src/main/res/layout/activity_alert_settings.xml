@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.alert_settings.AlertSettingsActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_35"
+            android:paddingHorizontal="@dimen/padding_20"
+            android:paddingBottom="@dimen/padding_20">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/objectCL"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_alert_radius_12"
+                android:paddingBottom="@dimen/padding_12"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/objectIV"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="@dimen/margin_12"
+                    android:src="@drawable/ic_alert_object"
+                    app:layout_constraintBottom_toTopOf="@id/line1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/objectTV"
+                    style="@style/tvStyle700"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:text="@string/object"
+                    android:textSize="@dimen/text_16"
+                    app:layout_constraintBottom_toBottomOf="@id/objectIV"
+                    app:layout_constraintStart_toEndOf="@id/objectIV"
+                    app:layout_constraintTop_toTopOf="@id/objectIV" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/objectSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="@dimen/margin_12"
+                    android:checked="true"
+                    app:layout_constraintBottom_toBottomOf="@id/objectTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/objectTV"
+                    app:switchMinWidth="40dp" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:background="@color/color_DCDCDC"
+                    app:layout_constraintTop_toBottomOf="@id/objectIV" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/categoryTV"
+                    style="@style/tvStyle500"
+                    android:layout_marginTop="@dimen/padding_14"
+                    android:text="@string/category"
+                    android:textSize="@dimen/text_14"
+                    app:layout_constraintStart_toStartOf="@id/objectIV"
+                    app:layout_constraintTop_toBottomOf="@id/line1" />
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/categoryATV"
+                    style="@style/edtStyle"
+                    android:layout_marginTop="@dimen/padding_14"
+                    android:drawableStart="@drawable/ic_category"
+                    android:drawableEnd="@drawable/ic_dropdown"
+                    android:drawablePadding="@dimen/padding_12"
+                    android:focusable="false"
+                    android:hint="@string/select_category"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    app:layout_constraintEnd_toEndOf="@id/objectSwitch"
+                    app:layout_constraintStart_toStartOf="@id/objectIV"
+                    app:layout_constraintTop_toBottomOf="@id/categoryTV" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/selectedCategoryRV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:orientation="vertical"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@id/objectSwitch"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/categoryATV"
+                    app:spanCount="2"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/adapter_alert_selected_category" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/distanceTV"
+                    style="@style/tvStyle500"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:text="@string/distance"
+                    app:layout_constraintEnd_toEndOf="@id/objectSwitch"
+                    app:layout_constraintStart_toStartOf="@id/objectIV"
+                    app:layout_constraintTop_toBottomOf="@+id/selectedCategoryRV" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/kmRS"
+                    style="@style/range_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:valueFrom="1.0"
+                    android:valueTo="100.0"
+                    app:layout_constraintEnd_toEndOf="@id/objectSwitch"
+                    app:layout_constraintStart_toStartOf="@id/objectIV"
+                    app:layout_constraintTop_toBottomOf="@id/distanceTV"
+                    app:thumbColor="@color/white"
+                    app:thumbRadius="13dp"
+                    app:thumbStrokeColor="@color/black"
+                    app:thumbStrokeWidth="7dp"
+                    app:trackColorActive="@color/colorPrimary"
+                    app:trackColorInactive="@color/color_C2C2C2_30"
+                    app:trackHeight="8dp"
+                    app:values="@array/initial_range_slider_values_1" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/endKmTV"
+                    style="@style/tvStyle500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/_100km"
+                    android:textColor="@color/black_50"
+                    android:textSize="@dimen/text_16"
+                    app:layout_constraintEnd_toEndOf="@id/kmRS"
+                    app:layout_constraintTop_toBottomOf="@id/kmRS" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/foodCL"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_20"
+                android:background="@drawable/bg_alert_radius_12"
+                android:paddingBottom="@dimen/margin_12"
+                android:layout_marginBottom="@dimen/margin_20"
+                app:layout_constraintEnd_toEndOf="@id/objectCL"
+                app:layout_constraintStart_toStartOf="@id/objectCL"
+                app:layout_constraintTop_toBottomOf="@id/objectCL">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/foodIV"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="@dimen/margin_12"
+                    android:src="@drawable/ic_alert_food"
+                    app:layout_constraintBottom_toTopOf="@id/line2"
+                    app:layout_constraintStart_toStartOf="@id/foodCL"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/foodTV"
+                    style="@style/tvStyle700"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:text="@string/food"
+                    android:textSize="@dimen/text_16"
+                    app:layout_constraintBottom_toBottomOf="@id/foodIV"
+                    app:layout_constraintStart_toEndOf="@id/foodIV"
+                    app:layout_constraintTop_toTopOf="@id/foodIV" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/foodSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="@dimen/margin_12"
+                    android:checked="false"
+                    app:layout_constraintBottom_toBottomOf="@id/foodTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/foodTV"
+                    app:switchMinWidth="40dp" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:background="@color/color_DCDCDC"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/foodIV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/foodDistanceTV"
+                    style="@style/tvStyle500"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:text="@string/distance"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@id/foodIV"
+                    app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/foodKmRS"
+                    style="@style/range_slider"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:valueFrom="1.0"
+                    android:valueTo="100.0"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/foodSwitch"
+                    app:layout_constraintStart_toStartOf="@id/foodIV"
+                    app:layout_constraintTop_toBottomOf="@id/foodDistanceTV"
+                    app:thumbColor="@color/white"
+                    app:thumbRadius="13dp"
+                    app:thumbStrokeColor="@color/black"
+                    app:thumbStrokeWidth="7dp"
+                    app:trackColorActive="@color/colorPrimary"
+                    app:trackColorInactive="@color/color_C2C2C2_30"
+                    app:trackHeight="8dp"
+                    app:values="@array/initial_range_slider_values_1" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/foodEndKmTV"
+                    style="@style/tvStyle500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/_100km"
+                    android:textColor="@color/black_50"
+                    android:textSize="@dimen/text_16"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/foodKmRS"
+                    app:layout_constraintTop_toBottomOf="@id/foodKmRS" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/btnStyle"
+                android:id="@+id/sendBTN"
+                android:visibility="gone"
+                android:layout_marginVertical="@dimen/margin_20"
+                android:text="@string/send_alert"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/objectCL"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintStart_toStartOf="@id/objectCL"
+                app:layout_constraintTop_toBottomOf="@+id/foodCL" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

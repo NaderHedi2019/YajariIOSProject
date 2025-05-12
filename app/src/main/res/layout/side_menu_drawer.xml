@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileCL"
+            android:padding="6dp"
+            android:background="@drawable/shape_profile_circle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_40"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="84dp"
+            android:layout_height="84dp">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="72dp"
+                android:id="@+id/profileIV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ImageView.Round50"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_dummy_5"
+                android:layout_height="72dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nameTV"
+            android:gravity="start"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/margin_18"
+            android:textSize="@dimen/text_20"
+            android:textColor="@color/white"
+            style="@style/tvStyle700"
+            android:text="Henley Bieber"
+            app:layout_constraintStart_toEndOf="@id/profileCL"
+            app:layout_constraintTop_toTopOf="@id/profileCL"
+           />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/donationCountTV"
+            style="@style/tvStyle500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_marginTop="@dimen/padding_3"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/donationTV"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/nameTV"
+            app:layout_constraintTop_toBottomOf="@id/nameTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/donationTV"
+            style="@style/tvStyle500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5"
+            android:text="@string/donations"
+            app:layout_constraintBottom_toBottomOf="@id/donationCountTV"
+            android:textColor="@color/white_70"
+            app:layout_constraintEnd_toStartOf="@id/collectionCountTV"
+            app:layout_constraintStart_toEndOf="@id/donationCountTV"
+            app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/collectionCountTV"
+            style="@style/tvStyle500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:text="0"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/collectionTV"
+            app:layout_constraintStart_toEndOf="@id/donationTV"
+            app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/collectionTV"
+            style="@style/tvStyle500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5"
+            android:text="@string/collection"
+            app:layout_constraintBottom_toBottomOf="@id/donationCountTV"
+            android:textColor="@color/white_70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/collectionCountTV"
+            app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textColor="@color/white_60"
+            android:layout_marginTop="@dimen/padding_3"
+            app:layout_constraintTop_toBottomOf="@id/collectionCountTV"
+            android:id="@+id/joinDateTV"
+            app:layout_constraintStart_toStartOf="@id/nameTV"
+            style="@style/tvStyle500"
+            android:text="Member since: 12/08/2023"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ratingIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star"
+            android:layout_marginTop="@dimen/padding_3"
+            app:layout_constraintStart_toStartOf="@id/nameTV"
+            app:layout_constraintTop_toBottomOf="@id/joinDateTV"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ratingTV"
+            style="@style/tvStyle400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:text="4.2"
+            android:layout_marginStart="@dimen/padding_6"
+            app:layout_constraintTop_toTopOf="@id/ratingIV"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/ratingIV"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalReviewTV"
+            style="@style/tvStyle600"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:textSize="@dimen/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_6"
+            android:text="(120)"
+            app:layout_constraintTop_toTopOf="@id/ratingTV"
+            android:textColor="@color/white_70"
+            app:layout_constraintStart_toEndOf="@+id/ratingTV"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sideMenuRV"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="@dimen/margin_25"
+            android:layout_marginHorizontal="@dimen/margin_23"
+            tools:listitem="@layout/adapter_side_menu"
+            app:layout_constraintTop_toBottomOf="@+id/profileCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/padding_7"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/tvStyle400"
+        android:id="@+id/descTV"
+        android:drawablePadding="@dimen/padding_10"
+        android:drawableStart="@drawable/ic_subs_check_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Unlimited announcement add"
+        android:textColor="@color/color_6F7983"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

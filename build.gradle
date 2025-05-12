@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        agp_version = '8.2.2'
+        kotlin_version = '1.9.22'
+        kapt_version = '1.9.22'
+        nav_version = '2.7.7'
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.4.0'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7"
+    }
+}
+
+plugins {
+//    id 'com.android.application' version '7.4.2' apply false
+//    id 'com.android.library' version '7.4.2' apply false
+//    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+
+    id("com.android.application") version '8.2.2' apply false
+    id("org.jetbrains.kotlin.android") version "1.9.22" apply false
+    id("org.jetbrains.kotlin.jvm") version "1.9.22" apply false
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22" apply false
+    id("io.ktor.plugin") version "2.3.7" apply false
+    id 'com.android.library' version '8.2.2' apply false
+    id("org.jetbrains.kotlin.kapt") version "1.9.22" apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

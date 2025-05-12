@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rateCL"
+            android:background="@drawable/shape_rate_dialog"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/padding_25"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="center"
+                android:id="@+id/msgTV"
+                android:textSize="@dimen/text_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/app_rate_msg"
+                android:layout_marginTop="@dimen/margin_35"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/tvStyle700"
+              />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/rate_exp_msg"
+                android:id="@+id/expMsgTV"
+                style="@style/tvStyle400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/msgTV"
+              />
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/appRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/expMsgTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srb_numStars="5"
+                app:srb_rating="3"
+                android:layout_marginTop="@dimen/margin_30"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:srb_starWidth="34dp"
+                app:srb_starHeight="34dp"
+                app:srb_starPadding="8dp"
+                app:srb_stepSize="1"
+                app:srb_clickable="true"
+                app:srb_scrollable="false"
+                app:srb_clearRatingEnabled="true"
+                app:srb_drawableEmpty="@drawable/ic_star_normal_empty"
+                app:srb_drawableFilled="@drawable/ic_star_normal_fill"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                style="@style/btnStyle"
+                android:id="@+id/submitBTN"
+                android:text="@string/submit"
+                android:layout_marginTop="@dimen/margin_50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appRB"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="-40dp"
+        app:layout_constraintTop_toTopOf="@id/rateCL"
+        android:src="@drawable/ic_logo_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

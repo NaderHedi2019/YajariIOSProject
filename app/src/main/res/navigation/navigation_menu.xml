@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_menu"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.app.yajari.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/navigation_food"
+        android:name="com.app.yajari.ui.food.FoodFragment"
+        android:label="@string/food"
+        tools:layout="@layout/fragment_food"/>
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.app.yajari.ui.chat.ChatFragment"
+        android:label="@string/chat"
+        tools:layout="@layout/fragment_chat"/>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.app.yajari.ui.profile.NewProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_new_profile"/>
+
+    <fragment
+        android:id="@+id/navigation_my_announcement"
+        android:name="com.app.yajari.ui.my_announcement.MyAnnouncementFragment"
+        android:label="@string/my_announcement"
+        tools:layout="@layout/fragment_my_announcement"/>
+
+    <fragment
+        android:id="@+id/navigation_my_fav"
+        android:name="com.app.yajari.ui.my_favourite.MyFavouriteFragment"
+        android:label="@string/my_fav"
+        tools:layout="@layout/fragment_my_favourite"/>
+    <fragment
+        android:id="@+id/navigation_my_pack"
+        android:name="com.app.yajari.ui.my_package.MyPackageFragment"
+        android:label="@string/my_package"
+        tools:layout="@layout/fragment_my_package"/>
+    <fragment
+        android:id="@+id/navigation_community"
+        android:name="com.app.yajari.ui.community_impact.CommunityImpactFragment"
+        android:label="@string/community_impact"
+        tools:layout="@layout/fragment_community_impact"/>
+    <fragment
+        android:id="@+id/navigation_yajari"
+        android:name="com.app.yajari.ui.yajari.YajariFragment"
+        android:label="@string/yajari"
+        tools:layout="@layout/fragment_yajari"/>
+    <fragment
+        android:id="@+id/navigation_account_parameter"
+        android:name="com.app.yajari.ui.account_parameter.AccountParameterFragment"
+        android:label="@string/account_parameter"
+        tools:layout="@layout/fragment_account_parameter"/>
+    <fragment
+        android:id="@+id/navigation_our_partner"
+        android:name="com.app.yajari.ui.our_partner.OurPartnerFragment"
+        android:label="@string/out_partner"
+        tools:layout="@layout/fragment_our_partner"/>
+</navigation>

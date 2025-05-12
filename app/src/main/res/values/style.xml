@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimaryRipple</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogStyle</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+
+    </style>
+
+    <!--========== Transparent BG ============-->
+    <style name="Theme.Transparent" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--========== Activity Animation ============-->
+    <style name="activityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:windowAllowEnterTransitionOverlap" tools:ignore="NewApi">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:ignore="NewApi">true</item>
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+
+    <!--========== BottomSheet Style ============-->
+
+    <style name="BottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetBackground</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:elevation" tools:ignore="NewApi">0dp</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="backgroundColor">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:statusBarColor">@android:color/transparent
+        </item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+        <!--<item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/_2sdp</item>-->
+    </style>
+
+    <style name="bottomSheetBackground" parent="Widget.Design.BottomSheet.Modal">
+        <!--        <item name="android:background">@drawable/bg_top_corner_white</item>-->
+        <item name="enforceMaterialTheme">true</item>
+        <!--        <item name="elevation">@dimen/_5sdp</item>-->
+    </style>
+
+    <!--========== Circular ImageView Layout ============-->
+    <style name="ImageView.Round50" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ImageView.Round20" parent="">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ImageView.Round10" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="ImageView.Round11" parent="">
+        <item name="cornerSize">11dp</item>
+    </style>
+
+    <style name="ImageView.Round15" parent="">
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="ImageView.Round14" parent="">
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <style name="ImageView.Round7" parent="">
+        <item name="cornerSize">7%</item>
+    </style>
+
+    <style name="ImageView.Round4" parent="">
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="ImageView.Round5" parent="">
+        <item name="cornerSize">5dp</item>
+    </style>
+
+    <style name="ImageView.Round6" parent="">
+        <item name="cornerSize">6dp</item>
+    </style>
+
+    <style name="ImageView.Round8" parent="">
+        <item name="cornerSize">9dp</item>
+    </style>
+
+    <style name="ImageView.Round3" parent="">
+        <item name="cornerSize">3dp</item>
+    </style>
+
+    <style name="ImageView.Corner" parent="">
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomLeft">40dp</item>
+        <item name="cornerSizeBottomRight">40dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ImageView.Corner.Impact" parent="">
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="cardStyle" parent="Platform.MaterialComponents">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">5dp</item>
+        <item name="cardMaxElevation">5dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+
+    <style name="btnStyle" parent="Platform.MaterialComponents">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cornerRadius">22dp</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/rale_way_bold</item>
+        <item name="android:padding" tools:ignore="NewApi">18dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Root Layout -->
+    <style name="rootStyle" parent="@style/Platform.MaterialComponents">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:animationCache">true</item>
+        <item name="android:animateLayoutChanges">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="rippleColor">@color/colorPrimaryRipple</item>
+        <item name="tabRippleColor">@color/white</item>
+        <item name="background">@color/white</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <!-- TextView 700 -->
+    <style name="tvStyle700" parent="Platform.MaterialComponents">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_24</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/rale_way_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_151515</item>
+    </style>
+
+    <style name="tvStyle600" parent="Platform.MaterialComponents">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:fontFamily">@font/rale_way_semi_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_151515</item>
+    </style>
+
+    <style name="tvStyle500" parent="Platform.MaterialComponents">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/rale_way_medium</item>
+        <item name="android:textColor">@color/color_151515</item>
+    </style>
+
+    <style name="tvStyle400" parent="Platform.MaterialComponents">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/rale_way_regular</item>
+        <item name="android:textColor">@color/color_151515</item>
+    </style>
+
+
+    <style name="tilStyle" parent="@style/Widget.Design.TextInputLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">false</item>
+        <item name="hintTextAppearance">@style/CustomHintTextAppearance</item>
+    </style>
+
+    <style name="CustomHintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:fontFamily">@font/rale_way_medium</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/color_8C8C8C</item>
+    </style>
+
+    <style name="edtStyle" parent="Platform.MaterialComponents">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_151515</item>
+        <item name="android:textColorHint">@color/color_8C8C8C</item>
+        <item name="android:textAppearance">@style/Text_Medium_16</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/padding_12</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">@dimen/padding_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@drawable/edt_shape_selector</item>
+    </style>
+    
+    <style name="Text_Medium_16" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/color_151515</item>
+        <item name="fontFamily">@font/rale_way_medium</item>
+    </style>
+
+    <style name="Text_SemiBold_14" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/color_151515</item>
+        <item name="fontFamily">@font/rale_way_semi_bold</item>
+    </style>
+
+    <style name="Text_Semi_Bold_16" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/tab_color_selector</item>
+        <item name="fontFamily">@font/rale_way_semi_bold</item>
+    </style>
+
+
+<!--    <style name="edtAddressStyle" parent="Widget.AppCompat.EditText">-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:textColor">@color/dark_grey</item>-->
+<!--        <item name="android:textColorHint">@color/text_color_hint</item>-->
+<!--        <item name="android:textAppearance">@style/Text_Regular_15</item>-->
+<!--        <item name="android:maxLines">1</item>-->
+<!--        <item name="android:background">@drawable/shape_edt_address</item>-->
+<!--        <item name="android:paddingHorizontal" tools:ignore="NewApi">@dimen/padding_15</item>-->
+<!--        <item name="android:paddingVertical" tools:ignore="NewApi">13dp</item>-->
+<!--    </style>-->
+
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="AppBottomSheetDialogTheme2" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle2</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AppModalStyle2" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_round_bg</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+
+    <style name="cvStyle" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="cvStyleOption" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardCornerRadius">13dp</item>
+    </style>
+
+    <style name="tilStylePwd" parent="@style/Widget.Design.TextInputLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.Slider" parent="">
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="range_slider" parent="@style/Widget.MaterialComponents.Slider">
+        <item name="labelStyle">@style/My_Tooltip</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Slider</item>
+    </style>
+
+    <style name="My_Tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="backgroundTint">@color/colorPrimary</item>
+    </style>
+    <style name="BottomSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/bottom_sheet_enter</item>
+        <item name="android:windowExitAnimation">@anim/bottom_sheet_exit</item>
+    </style>
+
+</resources>

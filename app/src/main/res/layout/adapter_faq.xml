@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/shape_faq"
+    android:paddingVertical="@dimen/padding_25"
+    android:paddingHorizontal="@dimen/padding_20"
+    android:layout_marginTop="@dimen/margin_20"
+    android:layout_marginBottom="@dimen/padding_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/faqCL"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/tvStyle700"
+        android:id="@+id/titleTV"
+        android:gravity="start"
+        android:drawableEnd="@drawable/ic_arrow_down_circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/text_18"
+        android:text="How do i change my email?"
+       />
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/tvStyle400"
+        android:id="@+id/descTV"
+        android:visibility="gone"
+        android:lineSpacingExtra="7dp"
+        android:layout_marginTop="@dimen/margin_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        android:text="Lorem ipsum dolor sit amet consectetur. Pharetra dolor feugiat enim odio massa pellentesque vulputate libero. Gravida ac nulla imperdiet suscipit nulla sit scelerisque pellentesque. Tellus consequat sit gravida eu cras lacus egestas.enim odio massa pellentesque vulputate libero. Gravida ac nulla imperdiet suscipit nulla sit scelerisque pellentesque. Tellus consequat sit gravida eu cras lacus egestas.nulla sit scelerisque pellentesque. Tellus consequat sit gravida eu cras lacus egestas. gravida eu cras lacus egestas."
+        android:textColor="@color/color_414141"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

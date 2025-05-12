@@ -1,0 +1,39 @@
+Port Forwarding Guide for Orange Router
+
+1. Access your Orange Router:
+   - Open a web browser
+   - Go to http://192.168.1.1 (default Orange router address)
+   - Login with your router credentials
+
+2. Find Port Forwarding Settings:
+   - Look for "Advanced Settings" or "Configuration"
+   - Find "Port Forwarding" or "NAT"
+   - Click "Add New Rule" or similar
+
+3. Configure the Port Forward:
+   - Name: Yajari Server
+   - Protocol: TCP
+   - External Port: 8080
+   - Internal IP: [Your computer's local IP address]
+   - Internal Port: 8080
+   - Enable the rule
+
+4. Find Your Computer's Local IP:
+   - On Windows, open Command Prompt
+   - Type: ipconfig
+   - Look for "IPv4 Address" under your active network adapter
+   - It will look like: 192.168.1.xxx
+
+5. Find Your Public IP:
+   - Visit https://whatismyip.com
+   - Note down your public IP address
+
+6. Test the Connection:
+   - From another device, try accessing:
+     http://[your-public-ip]:8080
+   - You should see the server response
+
+Important Notes:
+- Make sure your computer's firewall allows incoming connections on port 8080
+- The server must be running for the connection to work
+- Your public IP might change if you don't have a static IP from your ISP 

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:tools="http://schemas.android.com/tools"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="16dp"
+    android:id="@+id/homeCV"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="false"
+    app:cardPreventCornerOverlap="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/padding_6"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearanceOverlay="@style/ImageView.Round10"
+            android:scaleType="centerCrop"
+            android:id="@+id/productIV"
+            android:src="@drawable/product_dummy_t_shirt"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:paddingHorizontal="@dimen/padding_6"
+            android:paddingVertical="@dimen/padding_4"
+            android:text="Good condition"
+            android:id="@+id/tagTV"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintWidth_default="wrap"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toStartOf="@id/likeIV"
+            android:textColor="@color/colorPrimary"
+            style="@style/tvStyle600"
+            android:background="@drawable/shape_tag"
+            android:layout_margin="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@id/productIV"
+            app:layout_constraintTop_toTopOf="@id/productIV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/likeIV"
+            android:src="@drawable/like_selector"
+            android:layout_margin="@dimen/padding_6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/tvStyle700"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginHorizontal="4dp"
+            android:id="@+id/productNameTV"
+            android:text="White T-Shirt"
+            android:gravity="start"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintTop_toBottomOf="@id/productIV"
+            tools:ignore="HardcodedText" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/announcementTV"
+            style="@style/tvStyle500"
+            android:textSize="@dimen/text_12"
+            android:layout_marginTop="@dimen/margin_10"
+            android:textColor="@color/color_reserved"
+            app:layout_constraintEnd_toEndOf="@id/productNameTV"
+            android:gravity="start"
+            android:text="Reserved"
+            android:drawablePadding="@dimen/padding_6"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_width="wrap_content"
+            android:drawableStart="@drawable/ic_announcement"
+            app:layout_constraintStart_toStartOf="@id/productNameTV"
+            app:layout_constraintTop_toBottomOf="@id/productNameTV"
+            tools:ignore="HardcodedText" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/kmTV"
+            android:text="3.5 km"
+            app:layout_constraintEnd_toStartOf="@id/timeTV"
+            android:layout_marginTop="@dimen/margin_12"
+            android:textColor="@color/color_414141"
+            android:textSize="@dimen/text_12"
+            android:drawablePadding="@dimen/padding_3"
+            android:drawableStart="@drawable/ic_location_km"
+            app:layout_constraintStart_toStartOf="@+id/productNameTV"
+            app:layout_constraintTop_toBottomOf="@id/announcementTV"
+            style="@style/tvStyle600"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/timeTV"
+            android:text="9 days"
+
+            app:layout_constraintWidth_default="wrap"
+            app:layout_constraintStart_toEndOf="@id/kmTV"
+            android:textColor="@color/color_414141"
+            android:textSize="@dimen/text_12"
+            android:gravity="end"
+            android:drawablePadding="@dimen/padding_3"
+            app:layout_constraintBottom_toBottomOf="@id/kmTV"
+            app:layout_constraintTop_toTopOf="@id/kmTV"
+            android:drawableStart="@drawable/ic_time_circle"
+            app:layout_constraintEnd_toEndOf="@+id/productNameTV"
+            style="@style/tvStyle600"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

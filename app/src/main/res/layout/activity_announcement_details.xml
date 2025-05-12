@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.announcement_details.AnnouncementDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/announcementDetailsCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/sliderVP"
+            android:layout_width="0dp"
+            android:layout_height="420dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhpan.indicator.IndicatorView
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_40"
+            app:layout_constraintBottom_toBottomOf="@id/sliderVP"
+            app:layout_constraintEnd_toEndOf="@id/sliderVP"
+            app:layout_constraintStart_toStartOf="@id/sliderVP"
+            app:vpi_slider_checked_color="@color/colorPrimary"
+            app:vpi_slider_normal_color="@color/black_50" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:src="@drawable/ic_back_circle_transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tagTV"
+            style="@style/tvStyle600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@drawable/shape_tag"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/padding_10"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@id/shareIV"
+            app:layout_constraintEnd_toStartOf="@id/likeIV"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toTopOf="@id/shareIV"
+            tools:text="Good condition" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/likeIV"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:src="@drawable/like_selector"
+            app:layout_constraintEnd_toStartOf="@id/shareIV"
+            app:layout_constraintTop_toTopOf="@id/shareIV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/shareIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:src="@drawable/ic_share_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/shape_announcement_detail"
+            android:paddingHorizontal="@dimen/padding_20"
+            android:paddingBottom="@dimen/margin_20"
+            app:layout_constraintTop_toBottomOf="@id/sliderVP">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTV"
+                style="@style/tvStyle700"
+                android:layout_marginTop="@dimen/margin_25"
+                android:gravity="start"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Dark brown t shirt with rounded neck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/typeTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toStartOf="@id/distanceTV"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTV"
+                app:layout_constraintWidth_default="wrap"
+                tools:text="Fashion" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/distanceTV"
+                style="@style/tvStyle600"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:textColor="@color/color_414141"
+                app:layout_constraintBottom_toBottomOf="@id/typeTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/typeTV"
+                app:layout_constraintTop_toTopOf="@id/typeTV"
+                tools:text="3.0 Km" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:drawableStart="@drawable/ic_location_km"
+                android:drawablePadding="@dimen/padding_10"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/typeTV"
+                tools:text="2118 Horridge Cir. Syracuse, Connecticut 35624" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/agoTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_18"
+                android:drawableStart="@drawable/ic_calender"
+                android:drawablePadding="@dimen/padding_10"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationTV"
+                tools:text="3 day ago" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/announcementTV"
+                style="@style/tvStyle600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_18"
+                android:drawableStart="@drawable/ic_reserved_announcement"
+                android:drawablePadding="@dimen/padding_10"
+                android:textColor="@color/color_reserved"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agoTV"
+                tools:text="Reserved" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/optionIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_option"
+                app:layout_constraintBottom_toBottomOf="@id/announcementTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/announcementTV" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/color_DCDCDC"
+                app:layout_constraintTop_toBottomOf="@id/announcementTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailTV"
+                style="@style/tvStyle600"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/details"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailDescTV"
+                style="@style/tvStyle500"
+                android:layout_marginTop="@dimen/margin_15"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/color_828282"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailTV"
+                tools:text="Lorem ipsum dolor sit amet consectetur. Feugiat suspendisse risus feugiat et ridiculus ac sapien scelerisque. Vitae libero eget scelerisque enim. Sed sapien quisque volutpat viverra turpis mattis. Vel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/donateTV"
+                style="@style/tvStyle600"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/donate_by"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailDescTV" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/donateCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/donateTV">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profileIV"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_user"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/ImageView.Round50" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/donateNameTV"
+                        style="@style/tvStyle600"
+                        android:layout_marginHorizontal="@dimen/padding_16"
+                        android:textColor="@color/color_151515"
+                        app:layout_constraintEnd_toStartOf="@id/likeUserIV"
+                        app:layout_constraintStart_toEndOf="@id/profileIV"
+                        app:layout_constraintTop_toTopOf="@id/profileIV"
+                        tools:text="Julia ann" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/likeUserIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_15"
+                        android:src="@drawable/ic_user_like_selector"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/donateNameTV" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ratingIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:src="@drawable/ic_star"
+                        app:layout_constraintStart_toStartOf="@id/donateNameTV"
+                        app:layout_constraintTop_toBottomOf="@id/donateNameTV" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/ratingTV"
+                        style="@style/tvStyle400"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:textColor="@color/color_828282"
+                        app:layout_constraintBottom_toBottomOf="@id/ratingIV"
+                        app:layout_constraintStart_toEndOf="@id/ratingIV"
+                        app:layout_constraintTop_toTopOf="@id/ratingIV"
+                        tools:text="4.2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/totalReviewTV"
+                        style="@style/tvStyle600"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/padding_6"
+                        android:textColor="@color/color_414141"
+                        app:layout_constraintBottom_toBottomOf="@id/ratingIV"
+                        app:layout_constraintStart_toEndOf="@id/ratingTV"
+                        app:layout_constraintTop_toTopOf="@id/ratingIV"
+                        tools:text="(120)" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/donationCountTV"
+                        style="@style/tvStyle500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        app:layout_constraintEnd_toStartOf="@id/donationTV"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="@id/donateNameTV"
+                        app:layout_constraintTop_toBottomOf="@id/ratingIV"
+                        tools:text="5" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/donationTV"
+                        style="@style/tvStyle500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        android:text="@string/donations"
+                        android:textColor="@color/color_828282"
+                        app:layout_constraintEnd_toStartOf="@id/collectionCountTV"
+                        app:layout_constraintStart_toEndOf="@id/donationCountTV"
+                        app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/collectionCountTV"
+                        style="@style/tvStyle500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_15"
+                        app:layout_constraintEnd_toStartOf="@id/collectionTV"
+                        app:layout_constraintStart_toEndOf="@id/donationTV"
+                        app:layout_constraintTop_toTopOf="@id/donationCountTV"
+                        tools:text="0" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/collectionTV"
+                        style="@style/tvStyle500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        android:text="@string/collection"
+                        android:textColor="@color/color_828282"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/collectionCountTV"
+                        app:layout_constraintTop_toTopOf="@id/donationCountTV" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@color/color_E2E2E2"
+                        app:layout_constraintTop_toBottomOf="@id/donationCountTV" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/kmTV"
+                        style="@style/tvStyle600"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_15"
+                        android:drawableStart="@drawable/ic_location_km"
+                        android:drawablePadding="@dimen/padding_3"
+                        android:textColor="@color/color_414141"
+                        android:textSize="@dimen/text_12"
+                        app:layout_constraintBottom_toBottomOf="@id/userAddressTV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        app:layout_constraintTop_toTopOf="@+id/userAddressTV"
+                        tools:text="3.5 km" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userAddressTV"
+                        style="@style/tvStyle500"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingVertical="13dp"
+                        android:textColor="@color/color_414141"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@+id/kmTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        tools:text="NewYork" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/color_DCDCDC"
+                app:layout_constraintTop_toBottomOf="@id/donateCV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationMapTV"
+                style="@style/tvStyle600"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/location"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/mapIV"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="@dimen/padding_16"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder_yajari"
+                app:layout_constraintTop_toBottomOf="@id/locationMapTV"
+                app:shapeAppearanceOverlay="@style/ImageView.Round10" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/takerTV"
+                style="@style/tvStyle600"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/taker"
+                android:textSize="@dimen/text_14"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mapIV" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/takerCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/takerTV">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/takerImageIV"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginVertical="@dimen/margin_10"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_user"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/ImageView.Round50" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/takerNameTV"
+                        style="@style/tvStyle600"
+                        android:layout_marginHorizontal="@dimen/padding_16"
+                        android:textColor="@color/color_151515"
+                        app:layout_constraintBottom_toBottomOf="@id/takerImageIV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/takerImageIV"
+                        app:layout_constraintTop_toTopOf="@id/takerImageIV"
+                        tools:text="Julia ann" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sendRequestBTN"
+                style="@style/btnStyle"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="@dimen/margin_25"
+                android:padding="0dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="@dimen/padding_18"
+                android:text="@string/contact"
+                android:textAlignment="center"
+                app:icon="@drawable/ic_send_request"
+                app:iconGravity="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mapIV" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editBTN"
+                style="@style/btnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:text="@string/edit"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/cancelBTN"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sendRequestBTN" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelBTN"
+                style="@style/btnStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@color/white"
+                android:padding="@dimen/padding_8"
+                android:text="@string/delete"
+                android:textColor="@color/color_414141"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/editBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/editBTN"
+                app:layout_constraintTop_toTopOf="@id/editBTN"
+                app:strokeColor="@color/color_414141"
+                app:strokeWidth="1dp" />
+
+            <!--            Finalized and Cancel Reserved BTN-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finalizedBTN"
+                style="@style/btnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:text="Finalized"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/cancelReservedBTN"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sendRequestBTN" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelReservedBTN"
+                style="@style/btnStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@color/white"
+                android:padding="@dimen/padding_8"
+                android:text="Cancel Reserved"
+                android:textColor="@color/color_414141"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/finalizedBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/finalizedBTN"
+                app:layout_constraintTop_toTopOf="@id/finalizedBTN"
+                app:strokeColor="@color/color_414141"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

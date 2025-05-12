@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_marginBottom="@dimen/margin_25"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/tvStyle500"
+        android:id="@+id/receiverMsgTV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="I want this thing would you like to give me?"
+        android:padding="@dimen/padding_22"
+        app:layout_constraintHorizontal_bias="0"
+        android:background="@drawable/shape_receiver_msg"
+        app:layout_constraintWidth_default="wrap"
+        android:layout_marginEnd="@dimen/margin_35"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+      />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/receiverTimeTV"
+        android:text="10:20 PM"
+        style="@style/tvStyle500"
+        android:textColor="@color/color_828282"
+        android:textSize="@dimen/text_10"
+        android:layout_marginTop="@dimen/margin_8"
+        app:layout_constraintStart_toStartOf="@id/receiverMsgTV"
+        app:layout_constraintTop_toBottomOf="@id/receiverMsgTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

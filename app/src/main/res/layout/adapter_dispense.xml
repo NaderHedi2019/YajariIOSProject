@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameTV"
+        style="@style/tvStyle500"
+        android:text="Free announcement"
+        android:layout_marginTop="@dimen/margin_15"
+         android:textColor="@color/filter_text_selector"
+        app:layout_constraintBottom_toBottomOf="@id/radioIV"
+        app:layout_constraintEnd_toStartOf="@id/radioIV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/radioIV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/radio_selector"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/color_DCDCDC"
+        app:layout_constraintTop_toBottomOf="@id/radioIV"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

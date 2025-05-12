@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/swipeRefresh"-->
+<!--    android:fitsSystemWindows="true"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".ui.chat.MyRequestFragment">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myRequestRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:itemCount="1"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHeight_default="wrap"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/adapter_my_request" />
+        <include
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/noDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_no_data"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
