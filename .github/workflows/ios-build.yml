@@ -10,7 +10,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Ruby for CocoaPods
       uses: ruby/setup-ruby@v1
@@ -34,7 +34,7 @@ jobs:
         xcodebuild -exportArchive -archivePath build/iosApp.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath build/export
 
     - name: Upload .ipa artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: iosApp-ipa
-        path: iosApp/build/export/*.ipa 
+        path: iosApp/build/export/*.ipa
